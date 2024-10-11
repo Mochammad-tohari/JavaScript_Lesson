@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Lesson</title>
+</head>
+
+
+
+<body>
+
+    <!-- 
+    
+    penulisan class dan id di javaScript menggunakan camelCase
+
+    seperti ini untuk name sama seperti id
+    <p id="testText" class="test-text"></p>
+
+    -->
+
+    <!--
+    
+    Memanggil elemen "<p>"
+    
+        -->
+
+    <p id="testText" class="test-text"></p>
+
+    <p id="sapaAku" class="sapa-aku"></p>
+
+    <h4>Looping / Pengualangan</h4>
+
+    <h5>While Do</h5>
+    <p id="whileOutPut" class="while-output"></p>
+
+    <h5>Do While</h5>
+    <p id="doWhileOutPut" class="do-while-output"></p>
+
+    <h5>For Loop</h5>
+    <p id="forOutPut" class="for-output"></p>
+
+    <script>
+
+        // inject value kepada tag html
+        document.getElementById('testText').innerHTML = "krakatowaaaa";
+
+        // inject document suatu value dan html
+        document.write('<h3>HAloo</h3>');
+
+    </script>
+
+    <!--
+        
+        Akhir Memanggil elemen "<p>"
+        
+            -->
+
+
+
+    <!-- Variable di JS -->
+
+    <script>
+
+        /*
+        
+        Tipe data string (String, Integer, Double, float)
+        value data (value yang di pass oleh user)
+        Jenis2 Operator
+        == Hanya Membandingkan value
+        === membandingkan value dan tipe data
+        ! tidak sama
+        != tidak sama dengan
+        && and and
+        || or
+        > lebih dari
+        < kurang dari
+        >= lebih dari sama dengan
+        <= kurang dari sama dengan
+
+        */
+
+        // "var" 
+        // untk membuat variable secara global
+
+        document.write("<h4> Variable </h4>");
+
+        var uang = 7500.50;
+        document.write("Uang 7500.50 : 2 = ", uang / 2, "</br>");
+
+        var bilangan = 5;
+        document.write("++ Bilangan : ", ++bilangan, "</br>");
+        document.write("-- Bilangan : ", --bilangan, "</br>");
+
+        var bilangan1 = 15;
+        var bilangan2 = 5;
+        document.write("Hasil bilangan1 + bilangan2 = ", bilangan1 + bilangan2, "</br>");
+
+
+        // Penjumlahan
+        document.write("Hasil 5 + 2 * 2 = ", 5 + 2 * 2, "</br>");
+        document.write("Hasil (5 + 2) * 2 = ", (5 + 2) * 2, "</br>");
+
+        // Pembulatan
+        var bilanganRound = 5.45;
+        document.write("Math ceil() = ", Math.ceil(bilanganRound), "</br>");
+        document.write("Math floor() = ", Math.floor(bilanganRound), "</br>");
+        document.write("Math round() = ", Math.round(bilanganRound), "</br>");
+
+        // Menghitung jumlah string nilai variable string
+        var stringLong = "Ini adalah " + "string yang " + "Sangat Panjang sekali";
+        document.write("Jumlah karakter : ", stringLong.length, "</br>");
+        // mengetahui indkes array ddari kata "sangat"
+        document.write("'Sangat' Berada di Indeks Ke : ", stringLong.indexOf("Sangat"), "</br>");
+        // slice
+        document.write(stringLong.slice(4, 10), "</br>");
+        document.write(stringLong.slice(4), "</br>");
+        // substr
+        document.write(stringLong.substr(23, 4), "</br>");
+        // replace kata
+        document.write(stringLong.replace("Panjang sekali", "pendek banget"), "</br>");
+        // menjadi kan 1 indeks array
+        // Ini adalah   string yang   Sangat Panjang sekali
+        //console loge hanya bisa dilihat di inspect klik console
+        console.log(stringLong.split());
+        console.log(stringLong.split(" "));
+
+        var arrString = stringLong.split(" ");
+        console.log(arrString[4]); //normal text
+        console.log(arrString[4].toLowerCase()); //lowercase text
+        console.log(arrString[4].toUpperCase()); //Uppercase text
+
+        //Styling JS
+        var strStyle = "Mochammad Tohari";
+        document.write("<br></br>");
+        document.write("Text Bold : ", strStyle.bold(), "</br>");
+        document.write("Text Italic : ", strStyle.italics(), "</br>");
+        document.write("Text Strike : ", strStyle.strike(), "</br>");
+        document.write("Text 50px : ", strStyle.fontsize('50'), "</br>");
+        document.write("Text sup : ", strStyle.sup(), "</br>");
+        document.write("Text sub : ", strStyle.sub(), "</br>");
+
+        document.write("<br></br>");
+        // Operator Kondisi
+        var umur = 9;
+        if ((umur >= 5) && (umur <= 6)) {
+            document.write("Pergi ke TK" + "</br>");
+        }
+        else if ((umur > 6) && (umur <= 15)) {
+            document.write("Pergi ke Sekolah" + "</br>");
+        }
+        else {
+            document.write("Pergi ke Lainya" + "</br>");
+        }
+
+        var umur = 9;
+        // Switch on true to handle range conditions
+        switch (true) {
+            case (umur >= 5 && umur <= 6):
+                document.write("Pergi ke TK" + "</br>");
+                break;
+
+            case (umur > 6 && umur <= 15):
+                document.write("Pergi ke Sekolah" + "</br>");
+                break;
+
+            default:
+                document.write("Pergi ke Lainya" + "</br>");
+                break;
+        }
+
+        //boolean true adn false
+
+        document.write("<h4>Boolean</h4>");
+        document.write("True : ", true, "</br>");
+        document.write("False : ", false, "</br>");
+
+        document.write("!True : ", !true, "</br>");
+        document.write("!False : ", !false, "</br>");
+
+        var bilBoolean = 5;
+        document.write("\"5\" == 5 ", ("5" == 5), "</br>"); //true karena hanya membandingkan value
+        document.write("\"5\" === 5 ", ("5" === 5), "</br>"); //false karena membandingkan value dan tipe data
+        var cekUmur = (bilBoolean >= 10) ? "Lebih dari 10 tahun" : "Kurang dari 10 tahun";
+        document.write("Cek Umur : ", cekUmur, "</br>");
+
+
+        //pengulangan / looping
+        // Looping While
+        var i = 1;
+        while (i <= 10) {
+            document.getElementById('whileOutPut').innerHTML += i + "</br>";
+            console.log(i);
+            i++;
+
+        }
+
+        //looping Do While
+        var a = 1;
+        do {
+            document.getElementById('doWhileOutPut').innerHTML += "Nomor ";
+            document.getElementById('doWhileOutPut').innerHTML += a + "</br> ";
+            console.log(a);
+            a++;
+        } while (a <= 10) {
+            document.getElementById('doWhileOutPut').innerHTML += "Akhir ";
+        }
+
+        //for Looping
+        var b = 1;
+        for (b = 0; b <= 20; b++) {
+
+            //skip
+            if (b === 12) {
+                continue;
+            }
+
+            //break
+            if (b === 15) {
+                continue;
+            }
+            document.getElementById('forOutPut').innerHTML += b + "</br>";
+            console.log(b);
+        }
+
+        // Array
+        document.write("<h4>Array</h4>");
+        var myData = ["Mochammad Tohari", "Bandung", 10000];
+        document.write("Cek Index ke 0 : ", myData[0], "</br>");
+        myData[3] = "MochammadTohari@gmail.com";
+        document.write("Cek Index ke 3 : ", myData[3], "</br>");
+        document.write(myData.join(" "), "</br>");
+
+        var nilai = [4, 6, 8, 12, 34, 29, 22, 1, 6]; //array
+        nilai.sort(function (x, y) { return x - y }); //function sort x & y sebagai parameter parameter bisa bebas asalkan tidak sama dengan variable
+        document.write("Nilai Array ", nilai.toString(), "</br>");
+
+
+        // var myName = prompt("Sebutkan Nama");
+
+        // if (myName != null) {
+        //     document.getElementById('sapaAku').innerHTML = "<h2>Halo, " + myName + "</h2>";
+        // } else {
+        //     window.alert("wah wah wah")
+        // }
+
+    </script>
+
+    <!-- End Variable di JS -->
+
+</body>
+
+</html>
