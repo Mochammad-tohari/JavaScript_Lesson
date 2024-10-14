@@ -237,6 +237,36 @@
         document.write("Nilai Array ", nilai.toString(), "</br>");
 
 
+        // Function
+        document.write("<h4>Function</h4>");
+
+        function dikalikan(params1) {
+            var variable1 = 2;
+
+            return params1 * variable1;
+        }
+
+        document.write("3 * 2 = ", dikalikan(3), "</br>");
+
+        function kaliFungsi(func1, params2) {
+            return func1(params2);
+        }
+        document.write("3 * 2 = ", kaliFungsi(dikalikan, 3), "</br>");
+
+        document.write("<br> ===============================================================</br>");
+
+        function kaliArray(paramsArray_1) {
+            var returnArray = [];
+
+            for (i = 0; i < paramsArray_1.length; i++) {
+                returnArray.push(paramsArray_1[i] * 2);
+            }
+            return returnArray;
+        }
+
+        document.write("Kalikan Array dengan 2 [1,2,3,4,5] = ", kaliArray([1, 2, 3, 4, 5]), "</br>");
+
+
         // var myName = prompt("Sebutkan Nama");
 
         // if (myName != null) {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Lesson 2</title>
+</head>
+
+<br>
+
+<!-- Kegunaan Onmouse -->
+
+<a href="javadcript:void(0)" onclick="alert('Hello World')" onmouseover="this.style.color='red'"
+    onmouseout="this.style.color='black'" onmousedown="this.text='Jangan Klik !'" onmouseup="this.text='Thanks !'">
+    Click Me</a>
+
+<!-- End Kegunaan Onmouse -->
+
+<br></br>
+
+<!-- Fungsi Perkalian -->
+
+<input type="number" id="angka_1" placeholder="Masukan Angka - 1">
+<input type="number" id="angka_2" placeholder="Masukan Angka - 2">
+<button type="button" onclick="kali()">Hitung Kali</button>
+
+<h4 id="hasil"></h4>
+
+<!-- End Fungsi Perkalian -->
+
+<script>
+
+    function openAlert(params_1) {
+        alert(params_1);
+    }
+
+
+    function kali() {
+
+        var angkaKe_1 = document.getElementById('angka_1');
+        var angkaKe_2 = document.getElementById('angka_2');
+
+        var isiangkaKe_1 = angkaKe_1.value;
+        var isiangkaKe_2 = angkaKe_2.value;
+
+        var hasilKali = isiangkaKe_1 * isiangkaKe_2;
+
+        document.getElementById('hasil').innerHTML = "Hasilnya Adalah : " + hasilKali;
+    }
+
+</script>
+
+</body>
+
+</html>
